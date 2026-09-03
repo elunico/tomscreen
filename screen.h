@@ -47,7 +47,10 @@ void S_reset_buffer();
 #include <format>
 #include <iostream>
 #include <sstream>
+#include <exception>
+#include <memory>
 #include <string>
+#include <print>
 
 class Screen {
     static void handle_screen_change(int);
@@ -110,11 +113,18 @@ class Screen {
     template <typename... Args>
     static void persistent_write(int row, Args&&... args)
     {
-        std::print("\0337\033[{};1H\033[0K",
-                   (m_total_rows - (persistent_rows() - row)));
+        if (row < 1 || row > persistent_rows()) {
+            return;
+        }
+        int target_row = total_rows() - (persistent_rows() - row);
+        if (target_row < 1) {
+            target_row = 1;
+        }
+        std::print("\0337\033[{};1H\033[0K", target_row);
 
         (std::print("{}", args), ...);
         std::print("\0338");
+        std::cout << std::flush;
     }
 
     template <typename... Args>
@@ -122,7 +132,7 @@ class Screen {
     {
         std::print("\033[0K");
         (std::print("{}", args), ...);
-        std::print("\n");
+        std::cout << std::endl;
     }
 };
 
