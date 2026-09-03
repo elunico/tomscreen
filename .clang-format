@@ -1,0 +1,54 @@
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignOperands: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: Yes
+BasedOnStyle: Chromium
+BreakBeforeBraces: WebKit
+BreakInheritanceList: AfterColon
+IndentWidth: 4
+PointerAlignment: Left
+ReflowComments: true
+SortIncludes: CaseInsensitive
+SortUsingDeclarations: true
+SpaceAfterCStyleCast: true
+SpaceAfterTemplateKeyword: true
+SpaceBeforeParens: ControlStatements
+SpacesInContainerLiterals: true
+UseTab: Never
+
+
+# Nice style but not as good as above, but not based on any existing style
+#---
+#AlignConsecutiveAssignments: Consecutive
+#AlignConsecutiveDeclarations: Consecutive
+#AlignOperands: true
+#AlignTrailingComments: true
+#AllowAllArgumentsOnNextLine: true
+#AllowAllParametersOfDeclarationOnNextLine: true
+#AllowShortBlocksOnASingleLine: Never
+#AllowShortCaseLabelsOnASingleLine: true
+#AllowShortIfStatementsOnASingleLine: Never
+#AllowShortLoopsOnASingleLine: false
+#AlwaysBreakAfterDefinitionReturnType: None
+#AlwaysBreakAfterReturnType: None
+#AlwaysBreakTemplateDeclarations: 'Yes'
+#BreakBeforeBraces: WebKit
+#BreakInheritanceList: AfterColon
+#ColumnLimit: 120
+#MaxEmptyLinesToKeep: 2
+#PointerAlignment: Left
+#ReflowComments: true
+#SortIncludes: CaseInsensitive
+#SortUsingDeclarations: true
+#SpaceAfterCStyleCast: true
+#SpaceAfterTemplateKeyword: true
+#SpaceBeforeCtorInitializerColon: false
+#SpaceBeforeInheritanceColon: false
+#SpaceBeforeParens: ControlStatements
+#SpacesInContainerLiterals: true
+#UseTab: Never
+#...
