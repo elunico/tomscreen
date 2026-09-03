@@ -5,7 +5,7 @@ project(tomscreen)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_C_STANDARD 17)
-option(NDEBUG no)
+option(NDEBUG on)
 if (NDEBUG)
 set(CMAKE_C_FLAGS "-O3 ${CMAKE_C_FLAGS}")
 else()
